@@ -19,5 +19,9 @@ FactoryGirl.define do
 
   factory :playlist do
     sequence(:name) { |n| "Playlist #{n}"}
+
+    factory :playlist_with_songs do
+      songs { create_list(:song, 3) }
+    end
   end
 end
